@@ -300,11 +300,37 @@
     else el.classList.remove('error');
   });
   if (!valid) { alert('Please fill in all required fields marked with *.'); return; }
-  window.open('https://docs.google.com/forms/d/e/1FAIpQLSdT8PWodVZCayRKaG59her3pnoQgT_A43V6SNY4LplxuEtVJA/viewform', '_blank');
-  document.getElementById('formWrap').style.display = 'none';
-  document.getElementById('formSuccess').classList.add('show');
-  window.scrollTo({top:0, behavior:'smooth'});
-  }
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  const data = {
+    firstName : first.value,
+    lastName  : document.getElementById('f-last').value,
+    phone     : phone.value,
+    email     : document.getElementById('f-email').value,
+    dob       : document.getElementById('f-dob').value,
+    status    : status.value,
+    service   : service.value,
+    provider  : document.getElementById('f-provider').value,
+    prefDay   : document.getElementById('f-pref-day').value,
+    prefTime  : document.getElementById('f-pref-time').value,
+    notes     : document.getElementById('f-notes').value
+  };
+  fetch('https://script.google.com/macros/s/AKfycbww7UjZHKiXx3hMOiX9sBeMkOHIkTQpA35Z_X7DncvzCh09enYzD0IHfftIScfwLmOTcw/exec', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+    window.scrollTo({top:0, behavior:'smooth'});
+  })
+  .catch(() => {
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+}
 </script>
 </body>
 </html>
