@@ -290,20 +290,18 @@
   document.querySelectorAll('.nav-drawer a').forEach(a=>a.addEventListener('click',()=>{drawer.classList.remove('open');document.body.style.overflow=''}));
 
   function submitForm() {
-    const first = document.getElementById('f-first');
-    const phone = document.getElementById('f-phone');
-    const status = document.getElementById('f-status');
-    const service = document.getElementById('f-service');
-    let valid = true;
-    [first, phone, status, service].forEach(el => {
-      if (!el.value.trim()) { el.classList.add('error'); valid = false; }
-      else el.classList.remove('error');
-    });
-    if (!valid) { alert('Please fill in all required fields marked with *.'); return; }
-    document.getElementById('formWrap').style.display = 'none';
-    document.getElementById('formSuccess').classList.add('show');
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
-</script>
-</body>
-</html>
+  const first   = document.getElementById('f-first');
+  const phone   = document.getElementById('f-phone');
+  const status  = document.getElementById('f-status');
+  const service = document.getElementById('f-service');
+  let valid = true;
+  [first, phone, status, service].forEach(el => {
+    if (!el.value.trim()) { el.classList.add('error'); valid = false; }
+    else el.classList.remove('error');
+  });
+  if (!valid) { alert('Please fill in all required fields marked with *.'); return; }
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSdT8PWodVZCayRKaG59her3pnoQgT_A43V6SNY4LplxuEtVJA/viewform', '_blank');
+  document.getElementById('formWrap').style.display = 'none';
+  document.getElementById('formSuccess').classList.add('show');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
