@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Leaf shape background -->
+  <path d="M50 5 C28 18 14 42 18 64 C22 86 38 97 50 99 C62 97 78 86 82 64 C86 42 72 18 50 5Z" fill="#003049"/>
+  <!-- Inner leaf depth -->
+  <path d="M50 14 C32 25 20 46 23 65 C26 84 40 93 50 95 C60 93 74 84 77 65 C80 46 68 25 50 14Z" fill="#004a6e"/>
+
+  <!-- I letter -->
+  <rect x="18" y="38" width="8" height="34" rx="2" fill="white"/>
+  <rect x="13" y="38" width="18" height="7" rx="2" fill="white"/>
+  <rect x="13" y="65" width="18" height="7" rx="2" fill="white"/>
+
+  <!-- G letter -->
+  <path d="M40 55 A13 13 0 1 1 53 68 L53 62 L46 62" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- H letter -->
+  <rect x="60" y="38" width="7" height="34" rx="2" fill="#FFD60A"/>
+  <rect x="74" y="38" width="7" height="34" rx="2" fill="#FFD60A"/>
+  <rect x="60" y="51" width="21" height="7" rx="2" fill="#FFD60A"/>
+
+  <!-- Teal pulse line at bottom of leaf -->
+  <polyline points="24,82 31,82 35,75 39,89 43,78 47,84 51,82 76,82"
+            fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>
