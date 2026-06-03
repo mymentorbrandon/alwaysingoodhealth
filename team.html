@@ -208,9 +208,80 @@
       color: #F0A500; font-size: .68rem; font-weight: 700;
       letter-spacing: .1em; text-transform: uppercase;
       padding: 6px 14px; border-radius: 100px;
-    }
+    } 
+    .learn-more {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--forest-mid);
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .03em;
+  transition: color .2s;
+}
+.learn-more:hover { color: var(--deep-green); }
+    /* ── BURGER MENU ── */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.burger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--deep-green);
+  border-radius: 2px;
+  transition: all .3s;
+}
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* ── RESPONSIVE ── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  background: rgba(255,251,240,.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(27,94,69,.1);
+  z-index: 89;
+  padding: 16px 28px 24px;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color .2s;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--forest); }
+.mobile-menu .mob-cta {
+  margin-top: 12px;
+  background: var(--coral);
+  color: #fff !important;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  border-bottom: none !important;
+}
+
+@media (max-width: 860px) {
+  .burger { display: flex; }
+}
+
+/* ── RESPONSIVE ── */
     @media (max-width: 860px) {
       .providers-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
@@ -242,7 +313,17 @@
       <li><a href="index.html#contact">Contact</a></li>
       <li><a href="appointment.html" class="nav-cta">Book Appointment</a></li>
     </ul>
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about"  onclick="closeMenu()">About</a>
+    <a href="index.html#services" onclick="closeMenu()">Services</a>
+    <a href="team.html"         onclick="closeMenu()">The Providers</a>
+    <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+    <a href="appointment.html" class="mob-cta" onclick="closeMenu()">Book Appointment</a>
+  </div>
 </div>
 
 <!-- ━━━ TICKER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
@@ -282,7 +363,7 @@
       <!-- Bruce Pendley -->
       <div class="provider-card">
         <div class="provider-photo">
-          <img src="images/bruce-pendley.jpg" alt="Bruce Pendley MD"
+          <img src="images/Bruce.png" alt="Bruce Pendley MD"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
           <div class="initials" style="display:none">BP</div>
         </div>
@@ -294,14 +375,15 @@
             <span class="tag">Primary Care</span>
             <span class="tag">Family Medicine</span>
             <span class="tag">Preventive Health</span>
-          </div>
+         </div>
+          <a href="https://drbrucependleymd.com/" target="_blank" class="learn-more">Learn More →</a>
         </div>
       </div>
 
       <!-- Randy Heisser -->
       <div class="provider-card">
         <div class="provider-photo">
-          <img src="images/randy-heisser.jpg" alt="Randy Heisser MD"
+          <img src="images/Randy.png" alt="Randy Heisser MD"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
           <div class="initials" style="display:none">RH</div>
         </div>
@@ -314,13 +396,14 @@
             <span class="tag">Chronic Disease Management</span>
             <span class="tag">Wellness</span>
           </div>
+          <a href="https://drrandyheissermd.com/" target="_blank" class="learn-more">Learn More →</a>
         </div>
       </div>
 
       <!-- Dr. Laurie Davis -->
       <div class="provider-card">
         <div class="provider-photo">
-          <img src="images/laurie-davis.jpg" alt="Dr. Laurie Davis DNP"
+          <img src="images/Davis.png" alt="Dr. Laurie Davis DNP"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
           <div class="initials" style="display:none">LD</div>
         </div>
@@ -334,13 +417,14 @@
             <span class="tag">Home Care</span>
             <span class="tag">Peptide Therapy</span>
           </div>
+          <a href="https://drdavisnp.com/" target="_blank" class="learn-more">Learn More →</a>
         </div>
       </div>
 
       <!-- Shae Hinton -->
       <div class="provider-card">
         <div class="provider-photo">
-          <img src="images/shae-hinton.jpg" alt="Shae Hinton"
+          <img src="images/Shae.png" alt="Shae Hinton"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
           <div class="initials" style="display:none">SH</div>
         </div>
@@ -408,5 +492,20 @@
   </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    document.getElementById('burger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('burger').classList.remove('open');
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const nav = document.querySelector('.nav-wrapper');
+    const menu = document.getElementById('mobileMenu');
+    if (!nav.contains(e.target) && menu.classList.contains('open')) closeMenu();
+  });
+</script>
 </body>
 </html>
