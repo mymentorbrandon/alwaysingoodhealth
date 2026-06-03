@@ -141,7 +141,7 @@
     .appt-section { padding: 72px 28px; background: var(--warm-white); }
     .inner { max-width: 1100px; margin: 0 auto; }
     .appt-grid {
-      display: grid; grid-template-columns: 1fr 1.4fr;
+      display: grid; grid-template-columns: 1.4fr 1fr;
       gap: 48px; align-items: start;
     }
 
@@ -247,10 +247,6 @@
       font-weight: 600; font-size: .875rem; text-decoration: none; transition: all .2s;
     }
     .success-card .btn-home:hover { background: var(--forest); }
-    <!-- ━━━ DISCLAIMER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <div style="background: var(--mist); border-top: 1px solid var(--border); padding: 12px 28px; text-align: center; font-size: .72rem; color: var(--text-muted); line-height: 1.6;">
-    * In Good Health offers no guarantee of specific results and results may vary from patient to patient. For medical emergencies, call 911.
-</div>
     
     /* ── FOOTER ── */
     footer { background: var(--deep-green); color: rgba(255,255,255,.55); padding: 48px 28px 28px; }
@@ -357,7 +353,7 @@
   <div class="inner">
     <div class="appt-grid">
 
-      <!-- LEFT: Info -->
+      <!-- RIGHT: Info -->
       <div>
         <div class="info-card call-card">
           <h3>Fastest Option — Call Us</h3>
@@ -408,7 +404,7 @@
         </div>
       </div>
 
-      <!-- RIGHT: Form -->
+      <!-- LEFT: Form -->
       <div>
         <div class="form-card" id="formCard">
           <h2>Appointment Request</h2>
@@ -525,7 +521,10 @@
     </div>
   </div>
 </section>
-
+<!-- ━━━ DISCLAIMER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <div style="background: var(--mist); border-top: 1px solid var(--border); padding: 12px 28px; text-align: center; font-size: .72rem; color: var(--text-muted); line-height: 1.6;">
+    * In Good Health offers no guarantee of specific results and results may vary from patient to patient. For medical emergencies, call 911.
+</div>
 <!-- ━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <footer>
   <div class="footer-inner">
