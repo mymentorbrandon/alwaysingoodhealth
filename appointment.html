@@ -247,7 +247,7 @@
       font-weight: 600; font-size: .875rem; text-decoration: none; transition: all .2s;
     }
     .success-card .btn-home:hover { background: var(--forest); }
-    
+
     /* ── FOOTER ── */
     footer { background: var(--deep-green); color: rgba(255,255,255,.55); padding: 48px 28px 28px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; }
@@ -353,63 +353,11 @@
   <div class="inner">
     <div class="appt-grid">
 
-      <!-- RIGHT: Info -->
-      <div>
-        <div class="info-card call-card">
-          <h3>Fastest Option — Call Us</h3>
-          <a href="tel:4238674969">(423) 867-4969</a>
-          <p>Available during office hours to schedule your visit and answer any questions about our services.</p>
-        </div>
-
-        <div class="info-card">
-          <div class="detail-row">
-            <div class="detail-ico">📍</div>
-            <div class="detail-txt">
-              <span class="lbl">Location</span>
-              <span class="val">1508 Tombras Ave<br>Chattanooga, TN 37412</span>
-            </div>
-          </div>
-          <div class="detail-row">
-            <div class="detail-ico">👥</div>
-            <div class="detail-txt">
-              <span class="lbl">Providers</span>
-              <span class="val">Dr. Pendley MD · Dr. Heisser MD · Dr. Davis DNP</span>
-            </div>
-          </div>
-          <div class="detail-row">
-            <div class="detail-ico">🩺</div>
-            <div class="detail-txt">
-              <span class="lbl">Services</span>
-              <span class="val">Primary Care · Hormone Therapy · Weight Loss · Stem Cell · Aesthetics</span>
-            </div>
-          </div>
-          <div class="detail-row">
-            <div class="detail-ico">🕐</div>
-            <div class="detail-txt">
-              <span class="lbl">Office Hours</span>
-              <span class="val">Mon – Fri: 8:00 AM – 5:00 PM<br>Sat: By Appointment · Sun: Closed</span>
-            </div>
-          </div>
-          <div class="detail-row">
-            <div class="detail-ico">🆘</div>
-            <div class="detail-txt">
-              <span class="lbl">Emergencies</span>
-              <span class="val">Call 911 or go to your nearest ER</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="new-patient-note">
-          <p><strong>New patient?</strong> Welcome! Please let us know in the form and we'll send you intake paperwork ahead of your visit to make your first appointment smooth and efficient.</p>
-        </div>
-      </div>
-
       <!-- LEFT: Form -->
       <div>
         <div class="form-card" id="formCard">
           <h2>Appointment Request</h2>
           <p class="form-sub">Fill out the form below — our team will contact you to confirm your visit.</p>
-
           <span class="form-section-label">Your Information</span>
           <div class="form-row">
             <div class="form-group">
@@ -445,7 +393,6 @@
               </select>
             </div>
           </div>
-
           <span class="form-section-label">Your Visit</span>
           <div class="form-group">
             <label>Reason for Visit <span class="req">*</span></label>
@@ -498,16 +445,13 @@
             <label>Additional Notes</label>
             <textarea id="f-notes" placeholder="Anything else our team should know before your visit..."></textarea>
           </div>
-
           <button class="btn-submit" id="submitBtn" onclick="submitForm()">Submit Appointment Request</button>
-
           <p class="form-note">
             * Required fields. This form submits a <em>request</em> — not a confirmed appointment.
             Our team will call or email to confirm. For urgent matters, call
             <a href="tel:4238674969">(423) 867-4969</a>.
           </p>
         </div>
-
         <!-- SUCCESS STATE -->
         <div class="success-card" id="successCard">
           <div class="tick">✅</div>
@@ -518,13 +462,64 @@
         </div>
       </div>
 
+      <!-- RIGHT: Info -->
+      <div>
+        <div class="info-card call-card">
+          <h3>Fastest Option — Call Us</h3>
+          <a href="tel:4238674969">(423) 867-4969</a>
+          <p>Available during office hours to schedule your visit and answer any questions about our services.</p>
+        </div>
+        <div class="info-card">
+          <div class="detail-row">
+            <div class="detail-ico">📍</div>
+            <div class="detail-txt">
+              <span class="lbl">Location</span>
+              <span class="val">1508 Tombras Ave<br>Chattanooga, TN 37412</span>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-ico">👥</div>
+            <div class="detail-txt">
+              <span class="lbl">Providers</span>
+              <span class="val">Dr. Pendley MD · Dr. Heisser MD · Dr. Davis DNP</span>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-ico">🩺</div>
+            <div class="detail-txt">
+              <span class="lbl">Services</span>
+              <span class="val">Primary Care · Hormone Therapy · Weight Loss · Stem Cell · Aesthetics</span>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-ico">🕐</div>
+            <div class="detail-txt">
+              <span class="lbl">Office Hours</span>
+              <span class="val">Mon – Fri: 8:00 AM – 5:00 PM<br>Sat: By Appointment · Sun: Closed</span>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-ico">🆘</div>
+            <div class="detail-txt">
+              <span class="lbl">Emergencies</span>
+              <span class="val">Call 911 or go to your nearest ER</span>
+            </div>
+          </div>
+        </div>
+        <div class="new-patient-note">
+          <p><strong>New patient?</strong> Welcome! Please let us know in the form and we'll send you intake paperwork ahead of your visit to make your first appointment smooth and efficient.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 <!-- ━━━ DISCLAIMER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-    <div style="background: var(--mist); border-top: 1px solid var(--border); padding: 12px 28px; text-align: center; font-size: .72rem; color: var(--text-muted); line-height: 1.6;">
-    * In Good Health offers no guarantee of specific results and results may vary from patient to patient. For medical emergencies, call 911.
+<div style="background: var(--mist); border-top: 1px solid var(--border); padding: 12px 28px; text-align: center; font-size: .72rem; color: var(--text-muted); line-height: 1.6;">
+  * In Good Health offers no guarantee of specific results and results may vary from patient to patient. For medical emergencies, call 911.
 </div>
+
 <!-- ━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <footer>
   <div class="footer-inner">
@@ -567,7 +562,6 @@
 </footer>
 
 <script>
-  // ── Burger menu ──────────────────────────────────────
   function toggleMenu() {
     document.getElementById('burger').classList.toggle('open');
     document.getElementById('mobileMenu').classList.toggle('open');
@@ -582,25 +576,20 @@
     if (!nav.contains(e.target) && menu.classList.contains('open')) closeMenu();
   });
 
-  // ── Form submission → Google Sheet ──────────────────
   function submitForm() {
     const first   = document.getElementById('f-first');
     const phone   = document.getElementById('f-phone');
     const status  = document.getElementById('f-status');
     const service = document.getElementById('f-service');
     let valid = true;
-
     [first, phone, status, service].forEach(el => {
       if (!el.value.trim()) { el.classList.add('error'); valid = false; }
       else el.classList.remove('error');
     });
-
     if (!valid) { alert('Please fill in all required fields marked with *.'); return; }
-
     const btn = document.getElementById('submitBtn');
     btn.textContent = 'Sending…';
     btn.disabled = true;
-
     const data = {
       firstName : first.value,
       lastName  : document.getElementById('f-last').value,
@@ -614,7 +603,6 @@
       prefTime  : document.getElementById('f-pref-time').value,
       notes     : document.getElementById('f-notes').value
     };
-
     fetch('https://script.google.com/macros/s/AKfycbww7UjZHKiXx3hMOiX9sBeMkOHIkTQpA35Z_X7DncvzCh09enYzD0IHfftIScfwLmOTcw/exec', {
       method  : 'POST',
       mode    : 'no-cors',
